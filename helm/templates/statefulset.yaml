@@ -1,0 +1,33 @@
+---
+apiVersion: apps/v1
+kind: StatefulSet
+
+metadata:
+  name: {{ $.Values.AppName }}
+  namespace: {{ $.Release.Namespace }}
+  labels:
+    app: {{ $.Values.AppName }}
+
+spec:
+
+  selector:
+    matchLabels:
+      app: {{ $.Values.AppName }}
+
+  template:
+    metadata:
+      name: {{ $.Values.AppName }}
+      labels:
+        app: {{ $.Values.AppName }}
+    spec:
+
+      containers:
+
+        - name: {{ $.Values.AppName }}
+          image: "{{ $.Values.ImageNameGithubTgFeed }}:{{ $.Values.ImageTagGithubTgFeed }}"
+          imagePullPolicy: IfNotPresent
+          envFrom:
+            - configMapRef:
+                name: {{ $.Values.AppName }}
+
+
