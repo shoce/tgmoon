@@ -1,5 +1,5 @@
 
-ARG APPNAME=tgmoon
+ENV APPNAME=tgmoon
 
 # https://hub.docker.com/_/golang/tags
 FROM golang:1.25.0 AS build
