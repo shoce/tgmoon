@@ -24,7 +24,7 @@ spec:
       containers:
 
         - name: {{ $.Values.AppName }}
-          image: "{{ $.Values.ImageNameGithubTgFeed }}:{{ $.Values.ImageTagGithubTgFeed }}"
+          image: "{{ $.Values.ImageNameGithubTgMoon }}:{{ $.Values.ImageTagGithubTgMoon }}"
           imagePullPolicy: IfNotPresent
           envFrom:
             - configMapRef:

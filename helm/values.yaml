@@ -2,8 +2,8 @@
 
 AppName: tgmoon
 
-ImageNameGithubTgFeed: ghcr.io/shoce/tgmoon
-ImageTagGithubTgFeed: ""
+ImageNameGithubTgMoon: ghcr.io/shoce/tgmoon
+ImageTagGithubTgMoon: ""
 
 YssUrl: https://yss/tgmoon
 
